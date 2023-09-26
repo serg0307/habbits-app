@@ -37,7 +37,9 @@ export class AddHabitComponent {
     this.data.goal = 0;
   }
   onNoClick(): void {
-
+    console.log('goal', this.data.goal);
+    if (!this.data.goal)
+    this.data.goal = 1;
     this.dialogRef.close();
   }
 }
