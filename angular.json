@@ -49,7 +49,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "baseHref": "/habits-demo/",
+              "baseHref": "/habits-app/",
               "outputHashing": "all"
             },
             "development": {
