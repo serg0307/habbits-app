@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Add a new Note!</h1>
+<mat-card mat-dialog-content>
+  <mat-card-content>
+    <mat-form-field class="w-100">
+
+      <textarea matInput
+                cdkTextareaAutosize
+                #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="5"
+                cdkAutosizeMaxRows="5" [(ngModel)]="data.message"></textarea>
+    </mat-form-field>
+
+  </mat-card-content>
+  <mat-card-actions mat-dialog-actions class="d-flex">
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <div class="flex-grow-1"></div>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+  </mat-card-actions>
+</mat-card>

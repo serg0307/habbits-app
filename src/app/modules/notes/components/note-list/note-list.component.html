@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="d-flex w-100 align-items-center my-3">
+    <span class="flex-grow-1">Notes</span>
+    <button mat-button (click)="openDialog()">+ Add note</button>
+  </div>
+  <mat-card *ngFor="let item of notes.reverse()" class="flex-row">
+
+      <app-note [note]="item" class="flex-grow-1"></app-note>
+
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="delete(item)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

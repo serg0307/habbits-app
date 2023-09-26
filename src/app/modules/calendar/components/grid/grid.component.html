@@ -1,0 +1,24 @@
+<div class="calendar-grid no-select">
+  <app-period *ngIf="showPeriod" [year]="year" [month]="month"></app-period>
+  <mat-grid-list cols="40" rowHeight="40px">
+    <mat-grid-tile *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color"
+      [ngStyle]="{'color': tile.textColor}"
+      [ngStyle]="{'border': tile.border ? 'solid gray 1px': ''}"
+      (click)="click(tile)">
+      <div class="today position-absolute w-100 h-100" *ngIf="tile.today"></div>
+      <ng-container *ngIf="tile.data?.value; else elseTemplate">
+        <mat-icon aria-hidden="false" aria-label="Check icon" fontIcon="check"></mat-icon>
+      </ng-container>
+      <ng-template #elseTemplate>
+        {{tile.text}}
+      </ng-template>
+
+
+    </mat-grid-tile>
+  </mat-grid-list>
+  <button mat-button (click)="openDialog()"> + New Habit</button>
+  <app-note-list class="container"></app-note-list>
+</div>
