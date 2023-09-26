@@ -3,11 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NoteComponent } from './components/note/note.component';
 import { NoteListComponent } from './components/note-list/note-list.component';
-
-import {MatButtonModule} from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MaterialGeneralModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -17,14 +13,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   imports: [
     CommonModule,
     FormsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatDialogModule,
-    MatFormFieldModule
+    MaterialGeneralModule
   ],
   exports: [
     NoteListComponent,
-    MatDialogModule
   ]
 })
 export class NotesModule { }

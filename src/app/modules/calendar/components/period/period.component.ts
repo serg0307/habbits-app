@@ -18,13 +18,13 @@ export class PeriodComponent {
   back(): void {
     const month = this.date.getMonth();
     this.date.setMonth(this.date.getMonth()-1);
-    console.log(this.date);
+
     this.router.navigate(['grid', this.date.getFullYear(), this.date.getMonth()+1]);
   }
   forward(): void {
     const month = this.date.getMonth()+2;
     this.date.setMonth(this.date.getMonth() + 1);
-    console.log(this.date, month, this.date.getFullYear());
+
     this.router.navigate(['grid', this.date.getFullYear(), this.date.getMonth() + 1]);
 
   }

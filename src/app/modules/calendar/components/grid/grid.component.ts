@@ -6,7 +6,6 @@ import { BaseColors, GridColors } from 'src/app/helpers/colors';
 import { DateFunctions } from 'src/app/helpers/date';
 import { IHabit } from 'src/app/interfaces/habit';
 import { IHabitEvent } from 'src/app/interfaces/habit-event';
-import { IHabitRow } from 'src/app/interfaces/habit-row';
 import { Tile } from 'src/app/interfaces/tile';
 import { HabitService } from 'src/app/services/habit.service';
 import { AddHabitComponent } from 'src/app/shared/dialog/add-habit/add-habit.component';
@@ -88,7 +87,6 @@ export class GridComponent {
     }
     const habit = this.getHabitById(event.habitId);
     const events = this.getEventsByHabitId(event.habitId);
-    console.log(habit.goal, events);
     tile.color = this.tileHighlight(habit.goal, events.length);
   }
   getEventsByHabitId(id: number): IHabitEvent[] {
