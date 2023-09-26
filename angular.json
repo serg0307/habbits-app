@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "habbits": {
+    "habits": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/habbits",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -49,6 +49,7 @@
                   "maximumError": "4kb"
                 }
               ],
+              "baseHref": "/habits-demo/",
               "outputHashing": "all"
             },
             "development": {
@@ -66,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "habbits:build:production"
+              "browserTarget": "habits:build:production"
             },
             "development": {
-              "browserTarget": "habbits:build:development"
+              "browserTarget": "habits:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "habbits:build"
+            "browserTarget": "habits:build"
           }
         },
         "test": {
