@@ -16,7 +16,7 @@ export class NoteListComponent {
     public dialog: MatDialog
   ) { }
   ngOnInit(): void {
-    this.notes = this.noteService.getAllNotes();
+    this.notes = this.noteService.getAllNotes().reverse();
   }
   delete(item: INote): void {
     this.notes = this.notes.filter((el) => el.id !== item.id);

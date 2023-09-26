@@ -3,7 +3,7 @@
     <span class="flex-grow-1">Notes</span>
     <button mat-button (click)="openDialog()">+ Add note</button>
   </div>
-  <mat-card *ngFor="let item of notes.reverse()" class="flex-row">
+  <mat-card *ngFor="let item of notes" class="flex-row">
 
       <app-note [note]="item" class="flex-grow-1"></app-note>
 
