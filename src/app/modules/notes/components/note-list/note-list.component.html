@@ -9,10 +9,10 @@
 
 
     <mat-card-actions>
-      <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+      <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="delete(item)">
         <mat-icon>delete</mat-icon>
       </button>
-      <button mat-raised-button color="primary" (click)="delete(item)">Delete</button>
+
     </mat-card-actions>
   </mat-card>
 </div>
